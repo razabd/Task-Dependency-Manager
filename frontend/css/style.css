@@ -1,0 +1,61 @@
+/* Menggunakan font Inter dari Google Fonts yang diimpor di HTML */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7fafc; /* bg-gray-100 versi Tailwind */
+}
+
+/* Styling tambahan jika diperlukan, sebagian besar akan ditangani oleh Tailwind */
+
+.card {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Styling untuk scrollbar (opsional, untuk konsistensi antar browser) */
+#taskList::-webkit-scrollbar,
+#sortedTasksResult::-webkit-scrollbar {
+    width: 8px;
+}
+
+#taskList::-webkit-scrollbar-track,
+#sortedTasksResult::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#taskList::-webkit-scrollbar-thumb,
+#sortedTasksResult::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* bg-gray-300 versi Tailwind */
+    border-radius: 10px;
+}
+
+#taskList::-webkit-scrollbar-thumb:hover,
+#sortedTasksResult::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0; /* bg-gray-400 versi Tailwind */
+}
+
+/* Styling untuk item list yang lebih menarik */
+#taskList li, #sortedTasksResult ol li {
+    padding: 0.75rem; /* p-3 */
+    background-color: #f9fafb; /* bg-gray-50 */
+    border-radius: 0.375rem; /* rounded-md */
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    margin-bottom: 0.5rem; /* space-y-2 */
+    transition: background-color 0.2s ease-in-out;
+    display: flex; /* Untuk alignment tombol hapus */
+    justify-content: space-between; /* Untuk alignment tombol hapus */
+    align-items: center; /* Untuk alignment tombol hapus */
+}
+#taskList li:hover {
+    background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+#sortedTasksResult ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem; /* Memberi ruang untuk nomor urut */
+}
+
+/* Icon styling */
+.ph-sm {
+    font-size: 1.1em; 
+    line-height: 1;
+}
